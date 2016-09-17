@@ -1,0 +1,40 @@
+{
+  "name": "facebook-auth-verifier",
+  "version": "0.0.1",
+  "description": "A small library to validate facebook auth token and parse it for consuming it in node.js backend server.",
+  "main": "./lib/main.js",
+  "scripts": {
+    "lint": "eslint lib test; exit 0",
+    "test": "mocha --reporter spec test",
+    "prepare": "npm run lint && npm test",
+    "coverage": "istanbul cover _mocha --report text -- -R spec test",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- --reporter spec && cat coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maeltm/node-facebook-auth-verifier.git"
+  },
+  "keywords": [
+    "facebook",
+    "login",
+    "auth"
+  ],
+  "author": "Catstail <maeltm18@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/maeltm/node-facebook-auth-verifier/issues"
+  },
+  "homepage": "https://github.com/maeltm/node-facebook-auth-verifier#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.13",
+    "eslint": "^3.5.0",
+    "eslint-config-google": "^0.6.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5"
+  },
+  "dependencies": {
+    "request": "^2.74.0",
+    "underscore": "^1.8.3"
+  }
+}
